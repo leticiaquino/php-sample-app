@@ -44,4 +44,32 @@ O comando *docker images* é utilizado para verificar se as imagens estão no re
 ```bash
 $ docker images
 ```
-**A configuração do [BACKEND](https://github.com/leticiaquino/php-sample-app/tree/master/backend) e do [FRONTEND](https://github.com/leticiaquino/php-sample-app/tree/master/frontend) estão no arquivo README.md de cada pasta.**
+Digite o comando abaixo para *buildar* a imagem no backend e insira a versao (Ex: 0.1)
+```bash
+docker build ./backend -t backend-mysqli:0.1
+```
+
+Digite o comando abaixo para *buildar* a imagem do frontend e insira a versao (Ex: 0.1)
+```bash
+docker build ./frontend -t php:7.2-apache:0.1
+```
+
+Rodando o container do backend:
+```bash
+docker run -d --rm --name backend -e MYSQL_DATABASE=demo -e MYSQL_ALLOW_EMPTY_PASSWORD=yes backend-mysql:0.1
+```
+Rodando o container do frontend:
+```bash
+docker run -d --rm --name frontend -p 80:80 --link backend frontend-php:0.1
+```
+
+Acessando a aplicação:
+```bash
+http://localhost
+```
+ou
+```bash
+http://192.168.99.100
+```
+
+```
