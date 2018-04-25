@@ -7,7 +7,7 @@ INSTRUÇÕES DE EXECUÇÃO DA APLICAÇÃO:
 
 Para a execução da aplicação, primeiramente instale o Docker Toolbox em seu computador.
 
-Segue o link para instalação: [Docker Toolbox](https://docs.docker.com/toolbox/overview/)
+Link para instalação: [Docker Toolbox](https://docs.docker.com/toolbox/overview/)
 
 Feito isso, o próximo passo é utilizar o terminal *Docker Quickstart* e acessar o diretório onde foi feito o download do seu repositório
 ```bash
